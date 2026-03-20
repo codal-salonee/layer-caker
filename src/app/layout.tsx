@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import { SanityLive } from "@/sanity/lib/live";
 import type { Metadata } from "next";
 
@@ -14,8 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-        <SanityLive />
+        <section className="bg-white min-h-screen">
+          <Header />
+          {children}
+          <SanityLive />
+        </section>
       </body>
     </html>
   );
